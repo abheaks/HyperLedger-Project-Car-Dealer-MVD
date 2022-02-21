@@ -1,0 +1,118 @@
+<head>
+    <div class="px-3 py-2 bg-secondary text-white">
+        <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <h2 href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+            <svg class="bi d-block mx-auto mb-1 " width="24" height="24"></svg>
+            {{title}}          
+            </h2>   
+        </div>
+        </div>
+    </div> 
+</head>
+</br>
+<div class="jumbotron jumbotronManufacturer jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Manufacturer Dashboard</h1>
+    <p class="lead"> 
+    Companies in the Car and Automobile Manufacturing industry manufacture cars and automobile chassis. These operators, which are referred to as automakers, typically produce cars, including electric cars, in assembly plants.
+    <mark>Manufacturer</mark> are one of the major players in the automobile industry.</p>
+  </div>
+</div>
+</br>
+<div class="container-fluid">
+    <div class="row rowBox" >
+        <div class="col-md-3 col-sm-12"></div>
+        <div class="col-md-6 col-sm-12">
+            <div class="card card-shadow">
+                <div class="card-header" style="background-color:tomato">
+                    <legend class="text-center" data-bs-toggle="collapse" href="#collapseQueryAdd" role="button" aria-expanded="false" aria-controls="collapseExample">Add a new Car</legend>
+                </div>
+                <div class="form-modal">
+                    <div class="card-body collapse" id="collapseQueryAdd">
+                        <form id="manForm">
+                            <div class="row" >
+                                <div class="col-md-12 col-sm-12" class="form-group">
+                                <a>Vin Number</a>
+                                <label for="vinNumber" class="form-label mt-4"></label>
+                                <input type="text" class="form-control" id="vinNumber" aria-describedby="vinNumber" placeholder="001">
+                                </div>
+                            </div>
+                            <div class="row" >
+                                <div class="col-md-12 col-sm-12" class="form-group">
+                                <a>Car Make</a>
+                                <label for="carMake" class="form-label mt-4"></label>
+                                <input type="text" class="form-control" id="carMake" aria-describedby="carMake" placeholder="Tata">
+                                </div>
+                            </div>
+                            <div class="row" >
+                                <div class="col-md-12 col-sm-12" class="form-group">
+                                <a>Car model</a>
+                                <label for="carModel" class="form-label mt-4"></label>
+                                <input type="text" class="form-control" id="carModel" aria-describedby="carModel" placeholder="Tiago">
+                                </div>
+                            </div>
+                            <div class="row" >
+                                <div class="col-md-12 col-sm-12" class="form-group">
+                                <a>Car Colour</a>
+                                <label for="carColour" class="form-label mt-4"></label>
+                                <input type="text" class="form-control" id="carColour" aria-describedby="carColour" placeholder="Black">
+                                </div>
+                            </div>
+                            <div class="row" >
+                                <div class="col-md-12 col-sm-12" class="form-group">
+                                <a>Date of manufacture</a>
+                                <label for="dom" class="form-label mt-4"></label>
+                                <input type="date" class="form-control" onfocus="(this.type='date')" id="dom" aria-describedby="dom" placeholder="22/06/2021">
+                                </div>
+                            </div>
+                            <div class="row" >
+                                <div class="col-md-12 col-sm-12" class="form-group">
+                                <a>Manufacturer Name</a>
+                                <label for="manName" class="form-label mt-4"></label>
+                                <input type="text" class="form-control" id="manName" aria-describedby="manName" placeholder="Tata Automobiles">
+                                </div>
+                            </div>            
+                            </br>
+                            <div class="row" >
+                                <div class="col-md-12 col-sm-12" >
+                                    <button type="button" onclick="ManWriteData(event)" class="btn btn-secondary rounded-pill">Submit</button>
+                                </div>
+                            </div>                                                                                                                                                        
+                        </form>
+                    </div>                 
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-12"></div>
+    </div>
+</div>
+</br>
+{{!-- Get Details of a Specific Page --}}
+<div class="container-fluid">
+    <div class="row rowBox" >
+        <div class="col-md-3 col-sm-12"></div>
+        <div class="col-md-6 col-sm-12">
+            <div class="card card-shadow">
+                <div class="card-header" style="background-color:tomato">
+                    <legend class="text-center" data-bs-toggle="collapse" href="#collapseQueryRead" role="button" aria-expanded="false" aria-controls="collapseExample">Get Details of a Specific Car</legend>
+                </div>
+                <div class="card-body collapse" id="collapseQueryRead">
+                    </br>
+                    <div class="row .navbar-brand" >
+                        <div class="col-md-12 col-sm-12" class="form-group">
+                        <a>Vin Number</a>
+                        <label for="QueryVinNumbMan" class="form-label mt-4"></label>
+                        <input type="text" class="form-control" id="QueryVinNumbMan" aria-describedby="QueryVinNumbMan" placeholder="001">
+                        </div>
+                    </div>
+                    </br>
+                    <button type="submit" onclick="ManQueryData(event)" class="btn btn-fill btn-secondary rounded-pill">Submit</button></br>
+                </div>
+            </div>        
+        </div>
+        <div class="col-md-3 col-sm-12"></div>
+    </div>
+</div>
+
+<script type="text/javascript" src='/javascripts/main.js'></script>
